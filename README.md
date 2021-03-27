@@ -2,7 +2,7 @@
 
 ![Build](https://github.com/ede-n/esgo-tools/actions/workflows/golang.yaml/badge.svg)
 
-Tooling for interacting with ElasticSearch written GoLang! 
+Tooling to interact with ElasticSearch written in GoLang! 
 
 ## How to install?
 
