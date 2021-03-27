@@ -16,24 +16,19 @@ import (
 
 var cfgFile string
 
-// rootCmd represents the base command when called without any subcommands
-var rootCmd = &cobra.Command{
-	Use:   "esgo-tools",
-	Short: "Tooling to interact with ElasticSearch written in GoLang!",
-	Long: `Bundles operations than span multiple REST api calls to ElasticSearch into intuitive commands.
-
-Supported Operations:
-  * snapshot-repo
-    - create
-    - update
-    - delete
-  * snapshot
-    - create
-`,
+func NewRootCmd() *cobra.Command {
+	// rootCmd represents the base command when called without any subcommands
+	return &cobra.Command{
+		Use:   "esgo-tools",
+		Short: "Tooling to interact with ElasticSearch written in GoLang!",
+		Long: `Bundles operations than span multiple REST api calls to ElasticSearch into intuitive commands.`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	//	Run: func(cmd *cobra.Command, args []string) { },
+	}
 }
+
+var rootCmd *cobra.Command = NewRootCmd()
 
 // Execute adds all child commands to the root command and sets flags appropriately.
 // This is called by main.main(). It only needs to happen once to the rootCmd.
